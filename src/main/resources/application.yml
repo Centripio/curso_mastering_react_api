@@ -1,0 +1,18 @@
+server:
+  port: 9999
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/moviestore?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    username: root
+    password: 1234
+    testWhileIdle: true
+    validationQuery: SELECT 1
